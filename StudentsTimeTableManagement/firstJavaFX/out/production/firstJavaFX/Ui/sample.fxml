@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="694.0" prefWidth="936.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+
+      <TabPane prefHeight="723.0" prefWidth="936.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Activities">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="activityTable" prefHeight="664.0" prefWidth="486.0">
+                          <columns>
+                            <TableColumn fx:id="activityTypeRow" prefWidth="75.0" text="ActivityType" />
+                            <TableColumn fx:id="activityDayRow" prefWidth="75.0" text="Day" />
+                              <TableColumn fx:id="activityHourRow" prefWidth="75.0" text="Hour" />
+                              <TableColumn fx:id="activityTeacherIdRow" prefWidth="85.60005187988281" text="TeacherId" />
+                              <TableColumn fx:id="activityDisciplineIdRow" prefWidth="78.39996337890625" text="DisciplineId" />
+                              <TableColumn fx:id="activityIdRow" prefWidth="89.60003662109375" text="ActivityId" />
+                          </columns>
+                        </TableView>
+                        <VBox prefHeight="664.0" prefWidth="451.0">
+                           <children>
+
+                              <Button fx:id="getAllActivitiesB" mnemonicParsing="false" onAction="#get_all_activities_handler" prefHeight="26.0" prefWidth="286.0" text="Get All Activities" />
+                              <Pane prefHeight="262.0" prefWidth="451.0">
+                                 <children>
+                                    <Label layoutX="46.0" layoutY="21.0" prefHeight="17.0" prefWidth="72.0" text="ActivityType" />
+                                    <Label layoutX="64.0" layoutY="61.0" prefHeight="17.0" prefWidth="37.0" text="Day" />
+                                    <Label layoutX="63.0" layoutY="99.0" prefHeight="17.0" prefWidth="55.0" text="Hour" />
+                                    <Label layoutX="52.0" layoutY="140.0" prefHeight="17.0" prefWidth="62.0" text="TeacherId" />
+                                    <Label layoutX="44.0" layoutY="217.0" prefHeight="17.0" prefWidth="68.0" text="ActivityId" />
+                                    <Label layoutX="49.0" layoutY="181.0" prefHeight="17.0" prefWidth="67.0" text="DisciplineId" />
+                                    <TextField fx:id="activityTypeText" layoutX="131.0" layoutY="17.0" />
+                                    <TextField fx:id="activityDayText" layoutX="131.0" layoutY="57.0" />
+                                    <TextField fx:id="activityHourText" layoutX="131.0" layoutY="95.0" />
+                                    <TextField fx:id="activityTeacherIdText" layoutX="131.0" layoutY="136.0" />
+                                    <TextField fx:id="activityDisciplineIdText" layoutX="131.0" layoutY="177.0" />
+                                    <TextField fx:id="activityIdText" layoutX="131.0" layoutY="213.0" />
+                                    <Button fx:id="activityAddB" layoutX="322.0" layoutY="48.0" mnemonicParsing="false" onAction="#activity_add_handler" text="Add" />
+                                    <Button fx:id="activityDeleteB" layoutX="322.0" layoutY="95.0" mnemonicParsing="false" onAction="#activity_delete_handler" text="Delete" />
+                                    <Button fx:id="activityUpdateB" layoutX="322.0" layoutY="145.0" mnemonicParsing="false" onAction="#activity_update_handler" text="Update" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+          </Tab>
+          <Tab text="Disciplines">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="disciplineTable" prefHeight="664.0" prefWidth="479.0">
+                          <columns>
+                            <TableColumn fx:id="disciplineNameRow" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="disciplineCreditsRow" prefWidth="75.0" text="Credits" />
+                              <TableColumn fx:id="disciplineIdRow" prefWidth="75.0" text="DisciplineID" />
+                          </columns>
+                        </TableView>
+                        <VBox prefHeight="664.0" prefWidth="478.0">
+                           <children>
+                              <Button fx:id="getAllDisciplinesB" mnemonicParsing="false" onAction="#get_all_disciplines_handler" prefHeight="26.0" prefWidth="270.0" text="Get All Disciplines" />
+                              <Pane prefHeight="343.0" prefWidth="468.0">
+                                 <children>
+                                    <Label layoutX="50.0" layoutY="37.0" prefHeight="17.0" prefWidth="41.0" text="Name" />
+                                    <Label layoutX="42.0" layoutY="101.0" prefHeight="17.0" prefWidth="61.0" text="Credits" />
+                                    <Label layoutX="52.0" layoutY="155.0" prefHeight="17.0" prefWidth="37.0" text="Id" />
+                                    <TextField fx:id="disciplineNameText" layoutX="125.0" layoutY="33.0" />
+                                    <TextField fx:id="disciplineCreditsText" layoutX="125.0" layoutY="97.0" />
+                                    <TextField fx:id="disciplineIdText" layoutX="125.0" layoutY="151.0" />
+                                    <Button fx:id="disciplineAddB" layoutX="325.0" layoutY="46.0" mnemonicParsing="false" onAction="#discipline_add_handler" text="Add" />
+                                    <Button fx:id="disciplineDeleteB" layoutX="325.0" layoutY="97.0" mnemonicParsing="false" onAction="#discipline_delete_handler" text="Delete" />
+                                    <Button fx:id="disciplineUpdateB" layoutX="325.0" layoutY="151.0" mnemonicParsing="false" onAction="#discipline_update_handler" text="Update" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+          </Tab>
+            <Tab text="Teachers">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="teacherTable" prefHeight="664.0" prefWidth="459.0">
+                          <columns>
+                            <TableColumn fx:id="teacherNameRow" prefWidth="75.0" text="Name" />
+                            <TableColumn fx:id="teacherSurnameRow" prefWidth="75.0" text="Surname" />
+                              <TableColumn fx:id="teacherEmailRow" prefWidth="75.0" text="Email" />
+                              <TableColumn fx:id="teacherRankRow" prefWidth="75.0" text="Rank" />
+                              <TableColumn fx:id="teacherIdRow" prefWidth="75.0" text="Id" />
+                          </columns>
+                        </TableView>
+                        <VBox prefHeight="664.0" prefWidth="512.0">
+                           <children>
+                              <Button fx:id="getAllTeachersB" mnemonicParsing="false" onAction="#get_all_teachers_handler" prefHeight="26.0" prefWidth="301.0" text="Get All Teachers" />
+                              <Pane prefHeight="373.0" prefWidth="494.0">
+                                 <children>
+                                    <Label layoutX="59.0" layoutY="43.0" text="Name" />
+                                    <Label layoutX="59.0" layoutY="90.0" text="Surname" />
+                                    <Label layoutX="59.0" layoutY="138.0" text="Email" />
+                                    <Label layoutX="59.0" layoutY="187.0" text="Rank" />
+                                    <Label layoutX="59.0" layoutY="236.0" text="Id" />
+                                    <TextField fx:id="teacherNameText" layoutX="137.0" layoutY="39.0" />
+                                    <TextField fx:id="teacherSurNameText" layoutX="137.0" layoutY="86.0" />
+                                    <TextField fx:id="teacherEmailText" layoutX="137.0" layoutY="134.0" />
+                                    <TextField fx:id="teacherRankText" layoutX="137.0" layoutY="183.0" />
+                                    <TextField fx:id="teacherIdText" layoutX="137.0" layoutY="232.0" />
+                                    <Button fx:id="teacherAddB" layoutX="332.0" layoutY="86.0" mnemonicParsing="false" onAction="#teacher_add_handler" text="Add" />
+                                    <Button fx:id="teacherDeleteB" layoutX="332.0" layoutY="134.0" mnemonicParsing="false" onAction="#teacher_delete_handler" text="Delete" />
+                                    <Button fx:id="teacherUpdateB" layoutX="332.0" layoutY="183.0" mnemonicParsing="false" onAction="#teacher_update_handler" text="Update" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="Formations">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="formationTable" prefHeight="664.0" prefWidth="442.0">
+                          <columns>
+                            <TableColumn fx:id="formationTypeRow" prefWidth="115.99999696016312" text="Type" />
+                            <TableColumn fx:id="formationStudentsRow" prefWidth="102.39999389648438" text="Nr of Students" />
+                              <TableColumn fx:id="formationIdRow" prefWidth="162.3999786376953" text="Id" />
+                          </columns>
+                        </TableView>
+                        <VBox prefHeight="664.0" prefWidth="494.0">
+                           <children>
+                              <Button fx:id="getAllFormationsB" mnemonicParsing="false" onAction="#get_all_formations_handler" prefHeight="26.0" prefWidth="261.0" text="Get All Formations" />
+                              <Pane prefHeight="376.0" prefWidth="494.0">
+                                 <children>
+                                    <Label layoutX="98.0" layoutY="51.0" text="Type" />
+                                    <Label layoutX="71.0" layoutY="96.0" text="Nr Of Students" />
+                                    <Label layoutX="106.0" layoutY="154.0" text="Id" />
+                                    <TextField fx:id="formationTypeText" layoutX="185.0" layoutY="47.0" />
+                                    <TextField fx:id="formationStudentsText" layoutX="185.0" layoutY="92.0" />
+                                    <TextField fx:id="formationIdText" layoutX="185.0" layoutY="150.0" />
+                                    <Button fx:id="formationAddB" layoutX="376.0" layoutY="60.0" mnemonicParsing="false" onAction="#formation_add_handler" text="Add" />
+                                    <Button fx:id="formationDeleteB" layoutX="376.0" layoutY="105.0" mnemonicParsing="false" onAction="#formation_Delete_handler" text="Delete" />
+                                    <Button fx:id="formationUpdateB" layoutX="376.0" layoutY="150.0" mnemonicParsing="false" onAction="#formation_update_handler" text="Update" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="Rooms">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="roomTable" prefHeight="664.0" prefWidth="467.0">
+                          <columns>
+                            <TableColumn fx:id="roomBuildingRow" prefWidth="111.19997864961624" text="Building" />
+                            <TableColumn fx:id="roomActivityTypesRow" prefWidth="240.8000030517578" text="Activity Types" />
+                              <TableColumn fx:id="roomIdRow" prefWidth="83.19998168945312" text="Id" />
+                          </columns>
+                        </TableView>
+                        <VBox prefHeight="664.0" prefWidth="470.0">
+                           <children>
+                              <Button fx:id="getAllRoomsB" mnemonicParsing="false" onAction="#get_all_rooms_handler" prefHeight="26.0" prefWidth="288.0" text="Get All Rooms" />
+                              <Pane prefHeight="427.0" prefWidth="470.0">
+                                 <children>
+                                    <Label layoutX="63.0" layoutY="59.0" text="Building" />
+                                    <Label layoutX="50.0" layoutY="127.0" text="ActivityTypes" />
+                                    <Label layoutX="63.0" layoutY="197.0" text="Id" />
+                                    <TextField fx:id="roomBuildingText" layoutX="126.0" layoutY="55.0" />
+                                    <TextField fx:id="roomActivityTypesText" layoutX="126.0" layoutY="123.0" />
+                                    <TextField fx:id="roomIdText" layoutX="126.0" layoutY="193.0" />
+                                    <Button fx:id="roomAddB" layoutX="322.0" layoutY="80.0" mnemonicParsing="false" onAction="#room_add_handler" text="Add" />
+                                    <Button fx:id="roomDeleteB" layoutX="322.0" layoutY="123.0" mnemonicParsing="false" onAction="#room_delete_handler" text="Delete" />
+                                    <Button fx:id="roomUpdateB" layoutX="322.0" layoutY="168.0" mnemonicParsing="false" onAction="#room_update_handler" text="Update" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="Relation">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="relationTable" prefHeight="664.0" prefWidth="467.0">
+                           <columns>
+                              <TableColumn fx:id="relationActivityRow" prefWidth="111.19997864961624" text="Activity" />
+                              <TableColumn fx:id="relationFormationRow" prefWidth="240.8000030517578" text="Formation" />
+                              <TableColumn fx:id="relationRoomRow" prefWidth="83.19998168945312" text="Room" />
+                           </columns>
+                        </TableView>
+                        <VBox prefHeight="664.0" prefWidth="470.0">
+                           <children>
+                              <Button fx:id="getAllRoomsB1" mnemonicParsing="false" onAction="#get_all_relations_handler" prefHeight="26.0" prefWidth="288.0" text="Get All Relations" />
+                              <Pane prefHeight="427.0" prefWidth="470.0">
+                                 <children>
+                                    <Label layoutX="47.0" layoutY="59.0" prefHeight="17.0" prefWidth="73.0" text="ActivityId" />
+                                    <Label layoutX="50.0" layoutY="127.0" text="FormationId" />
+                                    <Label layoutX="63.0" layoutY="197.0" text="RoomId" />
+                                    <TextField fx:id="relationActivityIdText" layoutX="126.0" layoutY="55.0" />
+                                    <TextField fx:id="relationFormationIdText" layoutX="126.0" layoutY="123.0" />
+                                    <TextField fx:id="relationRoomIdText" layoutX="126.0" layoutY="193.0" />
+                                    <Button fx:id="relationAddB" layoutX="322.0" layoutY="80.0" mnemonicParsing="false" onAction="#relation_add_handler" text="Add" />
+                                    <Button fx:id="relationDeleteB" layoutX="322.0" layoutY="123.0" mnemonicParsing="false" onAction="#relation_delete_handler" text="Delete" />
+                                    <Button fx:id="relationUpdateB" layoutX="322.0" layoutY="168.0" mnemonicParsing="false" onAction="#relation_update_handler" text="Update" />
+                                    <Button fx:id="GetTimeTableB" layoutX="63.0" layoutY="298.0" mnemonicParsing="false" onAction="#getTimeTable_handler" prefHeight="25.0" prefWidth="281.0" text="GetTimeTable" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+            <Tab text="TimeTable">
+               <content>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="timeTable" prefHeight="663.0" prefWidth="937.0">
+                          <columns>
+                            <TableColumn fx:id="timeTableMonday" prefWidth="204.79998475313187" text="Monday" />
+                            <TableColumn fx:id="timeTableTuesday" prefWidth="175.1999969482422" text="Tuesday" />
+                              <TableColumn fx:id="timeTableWednesday" prefWidth="180.0" text="Wednesday" />
+                              <TableColumn fx:id="timeTableThursday" prefWidth="194.39996337890625" text="Thursday" />
+                              <TableColumn fx:id="timeTableFriday" prefWidth="189.60003662109375" text="Friday" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </HBox>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
